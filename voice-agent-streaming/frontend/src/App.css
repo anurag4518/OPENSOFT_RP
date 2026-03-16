@@ -1,0 +1,374 @@
+.app-page {
+  min-height: 100vh;
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-shell {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.agora-shell {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.7));
+  border: 1px solid rgba(71, 85, 105, 0.45);
+  border-radius: 1rem;
+  box-shadow:
+    0 14px 34px rgba(2, 6, 23, 0.45),
+    inset 0 1px 0 rgba(148, 163, 184, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.app-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  margin: 0 0 0.5rem;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.app-subtitle {
+  margin: 0.5rem 0 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.agora-status {
+  background: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  border-radius: 9999px;
+}
+
+.app-status-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+}
+
+.status-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 9999px;
+}
+
+.status-dot-connected {
+  background: #34d399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.7);
+}
+
+.status-dot-error {
+  background: #f87171;
+}
+
+.status-dot-connecting {
+  background: #fbbf24;
+  animation: pulse-dot 1.2s infinite;
+}
+
+.app-status-label {
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+.app-status-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.app-status-connected {
+  color: #a7f3d0;
+}
+
+.app-status-error {
+  color: #fca5a5;
+}
+
+.app-status-connecting {
+  color: #fde68a;
+}
+
+.stream-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stream-card {
+  padding: 1.5rem;
+  min-height: 20rem;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 30px rgba(2, 6, 23, 0.35),
+    inset 0 1px 0 rgba(148, 163, 184, 0.08);
+}
+
+.stream-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stream-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #94a3b8;
+}
+
+.stream-title {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.stream-pill {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.stream-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stream-btn {
+  border: 0;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.stream-btn-idle {
+  background: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+}
+
+.stream-btn-idle:hover {
+  background: #4f46e5;
+}
+
+.stream-btn-recording {
+  background: #ef4444;
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.45);
+}
+
+.stream-btn-recording:hover {
+  background: #dc2626;
+}
+
+.stream-live-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stream-live-dot-wrap {
+  position: relative;
+  display: inline-flex;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.stream-live-dot-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #f87171;
+  opacity: 0.75;
+  animation: ping-dot 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.stream-live-dot {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: #ef4444;
+}
+
+.stream-live-label {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+.stream-error {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: #fca5a5;
+}
+
+.player-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.player-indicator {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
+}
+
+.player-indicator-active {
+  background: #10b981;
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.4);
+}
+
+.player-indicator-idle {
+  background: #334155;
+}
+
+.player-indicator-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.player-indicator-icon-active {
+  animation: pulse-dot 1.2s infinite;
+}
+
+.player-indicator-icon-idle {
+  opacity: 0.5;
+}
+
+.player-status-text {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.diagnostics-card {
+  margin-top: 2rem;
+  padding: 1.75rem;
+}
+
+.diagnostics-title {
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.diagnostics-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #818cf8;
+}
+
+.diagnostics-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.diagnostics-list li::marker {
+  color: #64748b;
+}
+
+@keyframes ping-dot {
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    padding: 2rem 1.75rem;
+  }
+
+  .app-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .app-title {
+    font-size: 2.25rem;
+  }
+
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  .stream-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stream-card {
+    padding: 2rem;
+    min-height: 22rem;
+  }
+
+  .player-status-text {
+    font-size: 1rem;
+  }
+
+  .diagnostics-title {
+    font-size: 1.125rem;
+  }
+}
